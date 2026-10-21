@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
+
+:root {
+    --bs-body-bg: #e6ccb2;
+    --bs-body-color: #3e2a1c;
+    --bs-body-font-family: Georgia, "Times New Roman", serif;
+}
+
+.pirateHeader {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.pirateHeader h1 {
+    font-family: "Pirata One", Georgia, serif;
+    font-size: 3.5rem;
+    color: #7f5539;
+    text-shadow:
+        2px 2px 0 #f5ebe0,
+        3px 3px 0 #b08968;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #9c6644;
+    margin: 6px 0 10px;
+}
+
+.headerIcon {
+    margin-top: 2rem;
+    width: 6rem;
+    height: auto;
+    display: inline-block;
+    transform-origin: left center;
+    animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%,
+    100% {
+        transform: skewY(-2deg);
+    }
+    50% {
+        transform: skewY(2deg);
+    }
+}
+
+.shipList {
+    background: #f5ebe0;
+    border: 2px solid #7f5539;
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 4px 4px 0 #7f5539;
+    transition:
+        transform 0.15s,
+        box-shadow 0.15s;
+}
+
+.shipList:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #7f5539;
+}
+
+.shipList h2 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    border-bottom: 1px dashed #b08968;
+    padding-bottom: 8px;
+}
+
+.shipStat {
+    margin: 4px 0;
+    font-size: 0.95rem;
+}
+
+.shipList button {
+    margin-top: 14px;
+    background: #7f5539;
+    color: #f5ebe0;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-family: inherit;
+}
+
+.shipList button:hover {
+    background: #9c2c2c;
+}
+
+.addButton {
+    background: #7f5539;
+    color: #f5ebe0;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: 1.1rem;
+    box-shadow: 3px 3px 0 #3e2a1c;
+}
+
+.addButton:hover {
+    background: #9c6644;
+}
+
+.shipForm {
+    margin-left: 3rem;
+    margin-right: 3rem; /* auto margins on both sides = centered */
+    /* padding: 28px 32px; */
+}
+.shipFormEdit {
+}
+
+/* the round handle - Safari & Chrome */
+.form-range::-webkit-slider-thumb {
+    background-color: #7f5539;
+}
+.form-range::-webkit-slider-thumb:active {
+    background-color: #9c6644;
+}
+
+/* the round handle - Firefox */
+.form-range::-moz-range-thumb {
+    background-color: #7f5539;
+}
+.form-range::-moz-range-thumb:active {
+    background-color: #9c6644;
+}
+
+/* the track (the line) */
+.form-range::-webkit-slider-runnable-track {
+    background-color: #d4b896;
+}
+.form-range::-moz-range-track {
+    background-color: #d4b896;
+}
+
+/* remove the blue glow when clicked */
+.form-range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 0.25rem rgba(127, 85, 57, 0.3);
+}
+.form-range:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 0.25rem rgba(127, 85, 57, 0.3);
+}
+
+.pirateNav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.pirateNav button {
+    background: transparent;
+    border: 2px solid #7f5539;
+    color: #7f5539;
+    border-radius: 999px;
+    padding: 8px 22px;
+    font-family: inherit;
+    font-size: 1.05rem;
+}
+
+.pirateNav button.active,
+.pirateNav button:hover {
+    background: #7f5539;
+    color: #f5ebe0;
+}
+
+.backButton {
+    background: none;
+    border: none;
+    color: #7f5539;
+    text-decoration: underline;
+    font-family: inherit;
+    margin-bottom: 8px;
+}
+
+.pageTitle {
+    font-family: "Pirata One", Georgia, serif;
+    font-size: 2.2rem;
+    color: #7f5539;
+}
+.searchBox {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.statusText {
+    text-align: center;
+    font-style: italic;
+    color: #9c6644;
+}
+
+.addButton:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
